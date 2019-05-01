@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Farewell Invitation IV CSE ACOE</title>
+  <meta name="description" content="This is a Farewell Invitation link to the final year students of CSE , ACOE">
+  <meta property="og:title" content="Farewell Invitation by 3rd CSE ACOE " />
+  <meta property="og:url" content="https://adityagrads.ml" />
+  <meta property="og:description" content="This is a Farewell Invitation link to the final year students of CSE , ACOE">
+  <meta property="og:type" content="article" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+</head>
+<body>
+  <script>
+   window.onload = function(){
+      let key = sessionStorage.getItem('farewell-rollno');
+      if(key == 1){
+        document.getElementById('error').innerHTML = "Please enter a valid rollno";
+      } 
+    }  
+  </script>
+    <div class="wrapper">
+      <div class="heading">
+        Farewell !
+      </div>
+      <div class="honour">
+        It's been our honour to have you here
+      </div>
+      <div class="humble">
+        we humbly request you to enter your roll no
+      </div>
+      <div id="error" class="error">
+
+      </div>
+      <div class="rollno-input">
+        <input id="rollno" type="text" placeholder="EG: 16MH1A0580" >
+      </div>
+      <div class="submit-button">
+        <button onClick="Submit()">Submit</button>
+      </div>
+      <div class="humble by">
+        From the 3rd year CSE, 
+        Aditya College of Engineering
+      </div>
+    </div>
+    
+    <script>
+      function Submit(){
+        console.log("Submitted");
+        var rollno = document.getElementById('rollno').value;
+        sessionStorage.setItem('farewell-rollno', rollno);
+        document.location.href="view.html";
+      }
+    </script>
+</body>
+</html>
